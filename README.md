@@ -4,15 +4,18 @@ Autoprefixer Plugin for CKStyle
 
 ## Usage
 
+`npm install ckstyle-autoprefixer`
+
 ```javascript
 
-var css = '.b {box-sizing: border-box;}'
+var prefixer = require('ckstyle-autoprefixer')
 
+var css = '.b {box-sizing: border-box;}'
 
 var res = CKStyle.start(css, {
         fileName: 'a.css'
     })
-    .plugin(autoprefix, {
+    .plugin(prefixer, {
         a: 1
     })
     .fix(function(res) {
